@@ -615,7 +615,7 @@ static int IMG_SavePNG_RW_libpng(SDL_Surface *surface, SDL_RWops *dst, int freed
 #define memset  SDL_memset
 #define strlen  SDL_strlen
 
-//#include "miniz.h"
+#include "miniz.h"
 
 static int IMG_SavePNG_RW_miniz(SDL_Surface *surface, SDL_RWops *dst, int freedst)
 {
