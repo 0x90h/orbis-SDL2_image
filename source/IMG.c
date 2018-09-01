@@ -61,11 +61,11 @@ extern int IMG_InitJPG(void);
 extern void IMG_QuitJPG(void);
 extern int IMG_InitPNG(void);
 extern void IMG_QuitPNG(void);
-extern int IMG_InitTIF(void);
-extern void IMG_QuitTIF(void);
+//extern int IMG_InitTIF(void);
+//extern void IMG_QuitTIF(void);
 
-extern int IMG_InitWEBP(void);
-extern void IMG_QuitWEBP(void);
+//extern int IMG_InitWEBP(void);
+//extern void IMG_QuitWEBP(void);
 
 static int initialized = 0;
 
@@ -88,6 +88,7 @@ int IMG_Init(int flags)
             result |= IMG_INIT_PNG;
         }
     }
+/*
     if (flags & IMG_INIT_TIF) {
         if ((initialized & IMG_INIT_TIF) || IMG_InitTIF() == 0) {
             result |= IMG_INIT_TIF;
@@ -98,6 +99,7 @@ int IMG_Init(int flags)
             result |= IMG_INIT_WEBP;
         }
     }
+*/
     initialized |= result;
 
     return result;
@@ -111,12 +113,14 @@ void IMG_Quit()
     if (initialized & IMG_INIT_PNG) {
         IMG_QuitPNG();
     }
+/*
     if (initialized & IMG_INIT_TIF) {
         IMG_QuitTIF();
     }
     if (initialized & IMG_INIT_WEBP) {
         IMG_QuitWEBP();
     }
+*/
     initialized = 0;
 }
 
