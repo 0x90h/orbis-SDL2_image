@@ -20,7 +20,7 @@ AllTarget = $(OutPath)/$(TargetFile).a
 include $(Ps4Sdk)/make/ps4sdk.mk
 
 IncludePath += -I$(Ps4Sdk)/include/SDL2 -I$(Ps4Sdk)/include
-CompilerFlags += -DVERSION=\"2.0.3\" -DLOAD_BMP=1 -DLOAD_GIF=1 -DLOAD_JPG=1 -DLOAD_LBM=1 -DLOAD_PCX=1 -DLOAD_PNG=1 -DLOAD_PNM=1 -DLOAD_SVG=1 -DLOAD_TGA=1 -DLOAD_WIC=1 -DLOAD_XCF=1 -DLOAD_XPM=1 -DLOAD_XV=1 -DLOAD_xxx=1 
+CompilerFlags += -DVERSION=\"2.0.3\" -DLOAD_BMP=1 -DLOAD_GIF=1 -DLOAD_JPG=1 -DLOAD_LBM=1 -DLOAD_PCX=1 -DLOAD_PNG=1 -DLOAD_PNM=1 -DLOAD_SVG=1 -DLOAD_TGA=1 -DLOAD_TIF=1 -DLOAD_WIC=1 -DLOAD_XCF=1 -DLOAD_XPM=1 -DLOAD_XV=1 -DLOAD_xxx=1 
 
 $(OutPath)/$(TargetFile).a: $(ObjectFiles)
 	$(dirp)

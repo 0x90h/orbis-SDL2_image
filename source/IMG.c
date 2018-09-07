@@ -43,7 +43,7 @@ static struct {
     { "PNG", IMG_isPNG, IMG_LoadPNG_RW },
     { "PNM", IMG_isPNM, IMG_LoadPNM_RW }, /* P[BGP]M share code */
     { "SVG", IMG_isSVG, IMG_LoadSVG_RW },
-//    { "TIF", IMG_isTIF, IMG_LoadTIF_RW },
+    { "TIF", IMG_isTIF, IMG_LoadTIF_RW },
     { "XCF", IMG_isXCF, IMG_LoadXCF_RW },
     { "XPM", IMG_isXPM, IMG_LoadXPM_RW },
     { "XV",  IMG_isXV,  IMG_LoadXV_RW  },
@@ -88,12 +88,12 @@ int IMG_Init(int flags)
             result |= IMG_INIT_PNG;
         }
     }
-/*
     if (flags & IMG_INIT_TIF) {
         if ((initialized & IMG_INIT_TIF) || IMG_InitTIF() == 0) {
             result |= IMG_INIT_TIF;
         }
     }
+/*
     if (flags & IMG_INIT_WEBP) {
         if ((initialized & IMG_INIT_WEBP) || IMG_InitWEBP() == 0) {
             result |= IMG_INIT_WEBP;
@@ -113,10 +113,10 @@ void IMG_Quit()
     if (initialized & IMG_INIT_PNG) {
         IMG_QuitPNG();
     }
-/*
     if (initialized & IMG_INIT_TIF) {
         IMG_QuitTIF();
     }
+/*
     if (initialized & IMG_INIT_WEBP) {
         IMG_QuitWEBP();
     }
